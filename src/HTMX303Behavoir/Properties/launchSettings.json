@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "AspNetCoreMvcHtmx": {
+    "HTMX303Behavoir": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
