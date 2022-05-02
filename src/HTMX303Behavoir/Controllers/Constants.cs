@@ -1,4 +1,4 @@
-namespace AspNetCoreMvcHtmx.Controllers;
+namespace HTMX303Behavoir.Controllers;
 
 public static class Constants
 {

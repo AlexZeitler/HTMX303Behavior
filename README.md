@@ -24,7 +24,7 @@ It contains
 
 ```
 yarn install
-cd src/AspNetCoreMvcHtmx
+cd src/HTMX303Behavoir
 yarn install
 libman restore
 ```
@@ -65,18 +65,18 @@ HTMX usage is shown on the Registration view, even the password strength indicat
 
 Of course, you want to rename the projects files to match our needs.
 
-You can use these commands, e.g. `AspNetCoreMvcHtmx`  gets renamed to `MyApp`:
+You can use these commands, e.g. `HTMX303Behavoir`  gets renamed to `MyApp`:
 
 ### Rename all references inside the files
 
 ```bash
-LC_ALL=C find . -type f -name '*.*' -not \( -path './node_modules/*' -o -path './src/AspNetCoreMvcHtmx/node_modules/*' -o -path './assets' \) -exec sed -i '' 's|AspNetCoreMvcHtmx|MyApp|g' {} \;
+LC_ALL=C find . -type f -name '*.*' -not \( -path './node_modules/*' -o -path './src/HTMX303Behavoir/node_modules/*' -o -path './assets' \) -exec sed -i '' 's|HTMX303Behavoir|MyApp|g' {} \;
 ```
 
 ### Rename files and folders
 
 ```bash
-find . -depth -name "*AspNetCoreMvcHtmx*" | \
-while IFS= read -r ent; do mv $ent ${ent%AspNetCoreMvcHtmx*}MyApp${ent##*AspNetCoreMvcHtmx}; done
+find . -depth -name "*HTMX303Behavoir*" | \
+while IFS= read -r ent; do mv $ent ${ent%HTMX303Behavoir*}MyApp${ent##*HTMX303Behavoir}; done
 
 ```

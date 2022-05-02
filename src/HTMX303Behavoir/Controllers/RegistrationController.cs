@@ -1,10 +1,11 @@
-using AspNetCoreMvcHtmx.Models;
+using HTMX303Behavoir.Models;
 using Easy_Password_Validator;
 using Easy_Password_Validator.Models;
+using Htmx;
 using Microsoft.AspNetCore.Mvc;
-using static AspNetCoreMvcHtmx.Controllers.Constants;
+using static HTMX303Behavoir.Controllers.Constants;
 
-namespace AspNetCoreMvcHtmx.Controllers;
+namespace HTMX303Behavoir.Controllers;
 
 public class RegistrationController : Controller
 {
@@ -23,8 +24,18 @@ public class RegistrationController : Controller
       return PartialView("_RegistrationForm", registration);
     }
 
-
-    return PartialView("_RegistrationSucceeded", registration);
+    Response.Htmx(
+      h =>
+      {
+        h.Redirect(
+          Url.Action(
+            "Index",
+            "Home"
+          ) ?? throw new InvalidOperationException()
+        );
+      }
+    );
+    return Ok();
   }
 
   [HttpPost]

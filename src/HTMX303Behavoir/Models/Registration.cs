@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AspNetCoreMvcHtmx.Models;
+namespace HTMX303Behavoir.Models;
 
 public class Registration
 {
